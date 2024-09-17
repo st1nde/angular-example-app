@@ -18,17 +18,22 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
+  //Doesnt work.. desription:https://github.com/users/st1nde/projects/1/views/1?pane=issue&itemId=80025078
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
+
+
   it(`should have as title 'angular-example-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('angular-example-app');
   });
+
+  //TODO #3
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
