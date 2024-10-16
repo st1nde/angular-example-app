@@ -43,4 +43,7 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.toolbar span')?.textContent).toContain('Dev-ops-kurssin harjoitusprojekti');
   });
+
+
+
 });

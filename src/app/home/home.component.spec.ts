@@ -8,12 +8,12 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
+      declarations: [HomeComponent],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA
       ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
@@ -23,4 +23,13 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have as header', () => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('#myHeader')?.textContent).toContain('Angular unit testing tutorials');
+  });
+
+
 });

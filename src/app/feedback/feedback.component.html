@@ -4,7 +4,7 @@
 <div class="container">
     <form [formGroup]="fbForm" (ngSubmit)="onSubmit()">
         <mat-form-field class="field-full-width">
-            <input matInput placeholder="title" formControlName="title">
+            <input matInput placeholder="title" formControlName="title" id="placeHolder">
             <mat-error *ngIf="title?.hasError('required')">Enter title</mat-error>
             <mat-error *ngIf="title?.hasError('minlength')">
                 The minimum length for this field is {{title?.errors?.['minlength'].requiredLength}}
